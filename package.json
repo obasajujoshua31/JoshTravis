@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "nyc --reporter=text --reporter=text mocha",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./test,./package.json,./npm-debug.log --copy-files",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./coverage,./node_modules,./.babelrc,./test,./package.json,./npm-debug.log --copy-files",
     "start": "npm run build && node dist/app.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
