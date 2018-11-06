@@ -53,7 +53,7 @@ describe('Todo Application with Babel', () => {
             assert.equal(res.statusCode, '200');
             assert.isArray(res.body);
             assert.equal(res.body.length, '4');
-            done.end();
+            done();
           });
       });
     });
@@ -66,7 +66,7 @@ describe('Todo Application with Babel', () => {
           assert.equal(res.statusCode, '200');
           assert.isObject(res.body);
           assert.isNotArray(res.body);
-          done.end();
+          done();
         });
     });
 
@@ -75,7 +75,7 @@ describe('Todo Application with Babel', () => {
         .end((err, res) => {
           assert.equal(res.statusCode, '404');
           assert.isUndefined(res.body.text);
-          done.end();
+          done();
         });
     });
   });
@@ -89,7 +89,7 @@ describe('Todo Application with Babel', () => {
           assert.isArray(res.body);
           assert.equal(res.body.length, '5');
           assert.isDefined(res.body);
-          done.end();
+          done();
         });
     });
   });
@@ -103,7 +103,7 @@ describe('Todo Application with Babel', () => {
           assert.equal(res.body.length, '3');
           assert.isArray(res.body);
           assert.isDefined(res.body);
-          done.end();
+          done();
         });
     });
     it('Should handle wrong Id', (done) => {
@@ -112,7 +112,7 @@ describe('Todo Application with Babel', () => {
         .end((err, res) => {
           assert.equal(res.statusCode, '404');
           assert.isUndefined(res.body.text);
-          done.end();
+          done();
         });
     });
   });
