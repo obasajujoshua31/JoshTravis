@@ -12,9 +12,12 @@ var _data = require('./data');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var PORT = process.env.PORT || 5000;
+
 var app = (0, _express2.default)();
 app.use(_express2.default.json());
 app.use(_express2.default.urlencoded({ extended: false }));
+
 app.get('/api', function (req, res) {
   res.json(_data.todos);
 });
@@ -59,7 +62,7 @@ app.delete('/api/:id/remove', function (req, res) {
     res.json(data);
   }
 });
-app.listen(3000, function () {
-  console.log('Server started at port 3000');
+app.listen(PORT, function () {
+  console.log('Server started at port ' + PORT);
 });
 exports.default = app;
