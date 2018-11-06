@@ -3,6 +3,8 @@ import {
   addNewTodo, getOneTodo, removeTodo, todos, toggleTodo,
 } from './data';
 
+const PORT = process.env.PORT || 5000;
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -51,7 +53,7 @@ app.delete('/api/:id/remove', (req, res) => {
     res.json(data);
   }
 });
-app.listen(3000, () => {
-  console.log('Server started at port 3000');
+app.listen(PORT, () => {
+  console.log(`Server started at port ${PORT}`);
 });
 export default app;
