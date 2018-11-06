@@ -9,6 +9,9 @@
     "start": "npm run build && node dist/app.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
+   "engines": {
+    "node": "10.x"
+  },
   "author": "Obasaju Joshua",
   "license": "ISC",
   "dependencies": {
