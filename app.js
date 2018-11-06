@@ -3,7 +3,7 @@ import {
   addNewTodo, getOneTodo, removeTodo, todos, toggleTodo,
 } from './data';
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5200;
 
 const app = express();
 app.use(express.json());
