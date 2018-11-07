@@ -1,11 +1,10 @@
 {
-	"presets" : ["es2015"],
-	"env" : {
-	"test": {
+	"presets" : ["@babel/preset-env"],
+	"env": {
+		"test":{
 			"plugins":[
-			"istanbul"
+				"istanbul"
 			]
+		}
 	}
-	}
-
 }

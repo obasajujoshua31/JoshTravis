@@ -3,7 +3,6 @@ import request from 'supertest';
 import {
   addNewTodo, getOneTodo, removeTodo, todos,
 } from '../data';
-
 import app from '../app';
 
 describe('Todo Application with Babel', () => {
